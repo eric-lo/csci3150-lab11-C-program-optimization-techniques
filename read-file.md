@@ -2,7 +2,7 @@
 
 We use`mmap`to open the following code whose name is`mmap_read.c`.
 
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>

@@ -1,6 +1,6 @@
 # Write to file {#write-to-file}
 
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
