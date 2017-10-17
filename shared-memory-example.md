@@ -4,7 +4,7 @@ Here are two programs, namely producer and consumer. Producer will write somethi
 
 Producer:
 
-```
+```c
 /**
  * Simple program demonstrating shared memory in POSIX systems.
  *
@@ -104,7 +104,7 @@ void display(char *prog, char *bytes, int n)
 
 Consumer:
 
-```
+```c
 /**
  * Simple program demonstrating shared memory in POSIX systems.
  *
@@ -202,6 +202,4 @@ Actually a shared memory can be found under the`/dev`folder as a file.![](assets
 ---
 
 Reference:[http://www.cse.psu.edu/~deh25/cmpsc473/notes/OSC/Processes/shm.html](http://www.cse.psu.edu/~deh25/cmpsc473/notes/OSC/Processes/shm.html)
-
-
 
