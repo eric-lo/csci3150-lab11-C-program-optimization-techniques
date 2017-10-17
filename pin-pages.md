@@ -4,7 +4,7 @@ We use the function **get\_user\_pages\_fast **to pin user pages in memory, the 
 
 _int get\_user\_pages\_fast\(unsigned long start, int nr\_pages, int write, struct page \*\* pages\),_
 
-where _unsigned long start \_is_ _the starting user address_, int nr\_pages_ is the number of pages from start to pin, \_int write_ indicates whether pages will be written to, and _struct page \*\* pages_ is the array that receives pointers to the pages pinned which should be at least _nr\_pages_ long.
+where **unsigned long start** is the starting user address, **int nr\_pages** is the number of pages from start to pin, **int write** indicates whether pages will be written to, and **struct page \*\* pages** is the array that receives pointers to the pages pinned which should be at least **nr\_pages **long.
 
-This function returns the number of pages pinned. This may be fewer than the number requested. If _nr\_pages_ is 0 or negative, returns 0. If no pages were pinned, returns -errno.
+This function returns the number of pages pinned. This may be fewer than the number requested. If **nr\_pages **is 0 or negative, returns 0. If no pages were pinned, returns -errno.
 
