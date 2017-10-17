@@ -10,5 +10,5 @@ The shared memory locations _flag \_and \_x_ both initialized to be 0. In the fi
 
 ![](/assets/memoryBarrierCase.png)
 
-After inserting the memory barriers, the print result will always be "100", as expected.
+After inserting the memory barriers, the statement "while\(flag==0\)" and "x=100" will be ensured to be executed before "print x" and "flag=1", respectively, so the print result will always be "100", as expected.
 
