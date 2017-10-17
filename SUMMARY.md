@@ -10,7 +10,6 @@
   * [Write to file](write-to-file.md)
   * [Pros and Cons of using nmap](pros-and-cons-of-using-nmap.md)
 * [Pin pages](pin-pages.md)
-  * [Pin pages](pin-pages/pin-pages.md)
 * [Memory barrier](memory-barrier.md)
   * [What is memory barrier?](memory-barrier/what-is-memory-barrier.md)
   * [Memory barrier example](memory-barrier/memory-barrier-example.md)
