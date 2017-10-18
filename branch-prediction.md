@@ -1,8 +1,8 @@
 # Branch Prediction {#branch-prediction}
 
-First let us look into the following program to get to know**branch prediction**:
+First let us look into the following program to get to know **branch prediction**:
 
-```
+```c
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -41,7 +41,7 @@ int main() {
 }
 ```
 
-We use perf to check the number of branch misses:
+We use _perf_ to check the number of branch misses:
 
 **without sorting**![](assets/img20.png)
 
@@ -65,44 +65,14 @@ We use perf to check the number of branch misses:
 To optimize the above program, we can remove if using the following lines, which are not easy to understand:
 
 ```
-int
- t = (data[c] - 
-128
-) 
->
->
-31
-;
-            sum += ~t 
-&
- data[c];
-
+int t = (data[c] - 128) >> 31;
+sum += ~t & data[c];
 ```
 
 **How this code works?**
 
-* If
-  `data[c] `
-  `>`
-  `= 128`
-  , then
-  `t = 0`
-  ,
-  `~t `
-  `&`
-  ` data[c] = data[c]`
-  .
-* If
-  `data[c] `
-  `<`
-  ` 128`
-  , then
-  `t = -1`
-  ,
-  `~t `
-  `&`
-  ` data[c] = 0`
-  .
+* `if data[c] >= 128`, then`t = 0`,`~t & data[c] = data[c]`.
+* If`data[c] < 128`, then`t = -1`,`~t & data[c] = 0`.
 
 Therefore, the above two lines can work correctly as same as`if`. Please refer to the references if you would like to know the operators \(`>>`,`~`,`&`\) in detail.
 
