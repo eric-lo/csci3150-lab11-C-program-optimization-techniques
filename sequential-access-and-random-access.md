@@ -1,6 +1,6 @@
-## Sequential access and random access {#sequential-access-and-random-access}
+## Turning random access to sequential access  {#sequential-access-and-random-access}
 
-### Sequential access {#sequential-access}
+* #### Sequential access
 
 The following code`seq_access.c`accesses memory sequentially.
 
@@ -34,7 +34,7 @@ int main(void) {
 }
 ```
 
-### Random access {#random-access}
+* #### Random access
 
 The following code`rand_access.c`tries to access memory randomly.
 
@@ -69,7 +69,7 @@ int main(void) {
 
 ## Difference between sequential access and random access {#difference-between-sequential-access-and-random-access}
 
-### Cache misses {#cache-misses}
+* #### Cache misses
 
 We use the following commands to measure cache misses:
 
@@ -80,7 +80,7 @@ $ perf stat -e cache-misses ./rand_access>/dev/null
 
 ![](img/img80.png "img80")
 
-### TLB misses {#tlb-misses}
+* #### TLB misses
 
 We collect TLB misses using the following commands:
 
@@ -90,7 +90,4 @@ $ perf stat -e dTLB-load-misses,iTLB-load-misses ./rand_access>/dev/null
 ```
 
 ![](img/img81.png "img81")
-
-  
-
 

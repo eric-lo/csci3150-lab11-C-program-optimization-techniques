@@ -6,6 +6,6 @@
 * [Program optimization techniques](program-optimization.md)
   * [Branch Prediction](branch-prediction.md)
   * [Loop unrolling](loop-unrolling.md)
-  * [Sequential access and random access](sequential-access-and-random-access.md)
+  * [Turning random access to sequential access](sequential-access-and-random-access.md)
 * [References](references.md)
 
