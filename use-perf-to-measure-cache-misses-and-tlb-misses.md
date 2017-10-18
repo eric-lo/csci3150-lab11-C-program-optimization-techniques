@@ -30,7 +30,7 @@ To collect TLB miss:
 $ perf stat -e dTLB-load-misses,iTLB-load-misses <command>
 ```
 
-For example:
+### **Example:**
 
 ```
 $ perf stat -e branch-misses ls>/dev/null
