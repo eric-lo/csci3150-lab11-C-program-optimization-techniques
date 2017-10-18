@@ -12,7 +12,7 @@ int cmpfunc (const void * a, const void * b) {
 }
 
 int main() {
-    // Generate data
+    /* Generate data */
     const unsigned arraySize = 32768;
     int data[arraySize];
     srand((int)123);
@@ -20,15 +20,15 @@ int main() {
     for (unsigned c = 0; c < arraySize; ++c)
         data[c] = rand() % 256;
 
-    // !!! With this, the next loop runs faster
+    /* !!! With this, the next loop runs faster */
     /* qsort(data, arraySize, sizeof(int), cmpfunc); */
 
-    // Test
+    /* Test */
     clock_t start = clock();
     long long sum = 0;
 
     for (unsigned i = 0; i < 100000; ++i) {
-        // Primary loop
+        /* Primary loop */
         for (unsigned c = 0; c < arraySize; ++c) {
             if (data[c] >= 128)
                 sum += data[c];
