@@ -1,4 +1,4 @@
-## Use perf to measure cache misses and TLB misses {#use-perf-to-measure-cache-misses-and-tlb-misses}
+## Use perf to measure branch, cache and TLB misses {#use-perf-to-measure-cache-misses-and-tlb-misses}
 
 ### Installation {#installation}
 
@@ -11,6 +11,12 @@ $ sudo apt-get install linux-tools-common linux-tools-4.4.0-31-generic linux-clo
 ```
 
 ### Usage {#usage}
+
+To measure branch miss:
+
+```
+$ perf stat -e branch-misses <command>
+```
 
 To measure cache miss:
 

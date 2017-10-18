@@ -1,4 +1,4 @@
-# Measurement of cache misses and TLB misses {#measurement-of-cache-misses-and-tlb-misses}
+# Measurement of branch, cache and TLB misses {#measurement-of-cache-misses-and-tlb-misses}
 
 This part briefly describes how to measure cache misses and TLB misses:
 
