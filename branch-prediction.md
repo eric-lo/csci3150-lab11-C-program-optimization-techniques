@@ -84,11 +84,11 @@ Now the number of branch misses with sorting is almost equal to that without sor
 
 **Branch prediction with && and &**
 
-Both of them can be used to evaluate the correctness of two expressions \(i.e., logical AND\). In the following statement, only both  condition1 and condition2 are true will statement 1 be executed, otherwise the statement 2 will be executed.
+Both of them can be used to evaluate the correctness of two expressions \(i.e., logical AND\). In the following pseudo code, only both  condition1 and condition2 are true will statement 1 be executed, otherwise the statement 2 will be executed.
 
 ```
 if (condition1 && (&) condition2) {
-    
+
     statement 1;
 } else {
 
@@ -96,7 +96,7 @@ if (condition1 && (&) condition2) {
 }
 ```
 
-However, there is a difference between them. "&&" serves in the way of short circuiting, that is an expression will be stopped being evaluated as soon as its outcome is determined. So if condition1 is false, then condition2  will not be executed, unlike "&" which always evaluate the correctness of both conditions. In the case that most of the first condition is false, "&&" shall achieve a better branch predictions accuracy because there is no need to evaluate the correctness of the second condition. However, if the first condition is more likely to be true, then it would be better to use "&" since 
+However, there is a difference between them. "&&" serves in the way of short circuiting, that is an expression will be stopped being evaluated as soon as its outcome is determined. So if condition1 is false, then condition2  will not be executed, unlike "&" which always evaluate the correctness of both conditions. In the case that most of the first condition is false, "&&" shall achieve a better branch predictions accuracy because there is no need to evaluate the correctness of the second condition. However, if the first condition is more likely to be true, then it would be better to use "&" since
 
 **References:**
 
