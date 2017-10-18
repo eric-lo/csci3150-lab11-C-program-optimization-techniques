@@ -4,7 +4,7 @@ In this tutorial, we are going to learn some optimization methods for C programs
 
 * The performance of programs are measured by cache misses and TLB misses, which can be checked by using **perf**
 
-* Some concrete examples showing the optimization tricks are given
+* Some concrete examples showing the optimization tricks are given:
 
   * Branch prediction
 
