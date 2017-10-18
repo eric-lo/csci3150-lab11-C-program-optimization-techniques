@@ -82,6 +82,10 @@ Now the number of branch misses with sorting is almost equal to that without sor
 
 * **with sorting:**![](assets/img23.png)
 
+**Branch prediction with && and &**
+
+d
+
 **References:**
 
 * [Wikipedia: Branch predictor](https://en.wikipedia.org/wiki/Branch_predictor)
