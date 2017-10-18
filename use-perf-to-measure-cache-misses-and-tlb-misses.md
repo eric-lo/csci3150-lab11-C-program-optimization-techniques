@@ -7,7 +7,7 @@ Install [_perf_](https://perf.wiki.kernel.org/index.php/Main_Page):
 Note that if you use **perf** on department **linux9 **servers, there is no need to install.
 
 ```
-$ sudo apt-get install linux-tools-common linux-tools-4.2.0-27-generic linux-cloud-tools-4.2.0-27-generic
+$ sudo apt-get install linux-tools-common linux-tools-4.4.0-31-generic linux-cloud-tools-4.4.0-31-generic
 ```
 
 ### Usage {#usage}
