@@ -2,14 +2,11 @@
 
 In this tutorial, we will introduce the following topics:
 
-* shared memory
-* system memory manipulation call: mmap
-* pin pages
-* memory barrier
+* segmentation fault
+* use
+  _perf_
+  to measure cache misses and TLB misses
+* difference between sequential access and random access
 
 Try to play around with them! Hope you can enjoy this lab!
-
----
-
-By Zhuangbin Chen \(zbchen@cse.cuhk.edu.hk\)
 
