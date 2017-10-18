@@ -72,7 +72,7 @@ sum += ~t & data[c];
 **How this code works?**
 
 * `if data[c] >= 128`, then`t = 0`,`~t & data[c] = data[c]`.
-* If`data[c] < 128`, then`t = -1`,`~t & data[c] = 0`.
+* `if data[c] < 128`, then`t = -1`,`~t & data[c] = 0`.
 
 Therefore, the above two lines can work correctly as same as`if`. Please refer to the references if you would like to know the operators \(`>>`,`~`,`&`\) in detail.
 
