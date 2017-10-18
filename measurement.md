@@ -6,5 +6,5 @@ This part briefly describes how to measure cache misses and TLB misses:
 
 **Important Note**:
 
-Please run\_perf\_on department **linux9 **servers. Because VirtualBox can **NOT **support \_perf \_though \_perf \_can be installed on VM successfully.
+Please run **perf** on department **linux9 **servers. Because VirtualBox can **NOT **support  **perf**  though  **perf**  can be installed on VM successfully.
 
