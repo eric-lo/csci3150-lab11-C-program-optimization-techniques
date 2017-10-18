@@ -18,7 +18,11 @@ The host name is at the form of "username@linux9.cse.cuhk.edu.hk"
 
 ![](/assets/linux9server.png)
 
+* Remember to add "-std=c99" when compiling your program, for example:
 
+```
+gcc -std=c99 -o helloworld helloworld.c
+```
 
 
 
