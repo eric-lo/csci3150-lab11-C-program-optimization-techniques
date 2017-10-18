@@ -8,9 +8,9 @@ In this tutorial, we are going to learn some optimization methods for C programs
 
   * Branch prediction
 
-  * Sequential access and random access
-
   * Loop unrolling
+
+  * Sequential access and random access
 
 Try to play around with them! Hope you can enjoy this lab!
 
