@@ -33,14 +33,20 @@ $ perf stat -e dTLB-load-misses,iTLB-load-misses <command>
 For example:
 
 ```
+$ perf stat -e branch-misses ls>/dev/null
+```
+
+![](/assets/branch-miss.png)
+
+```
 $ perf stat -e cache-misses ls>/dev/null
 ```
 
-![](img/img02.png "img02")
+![](/assets/cache-miss.png)
 
 ```
 $ perf stat -e dTLB-load-misses,iTLB-load-misses ls>/dev/null
 ```
 
-![](img/img03.png "img03")
+![](/assets/TLB-miss.png)
 
