@@ -84,7 +84,7 @@ Now the number of branch misses with sorting is almost equal to that without sor
 
 **Branch prediction with && and &**
 
-Both of them can be used to evaluate the correctness of two expressions \(i.e., logical AND\). In the following pseudo code, only both  condition1 and condition2 are true will statement 1 be executed, otherwise the statement 2 will be executed.
+Both of them can be used to evaluate the correctness of two expressions \(i.e., logical AND\). In the following pseudo code, only both  condition1 and condition2 are true will statement 1 be executed, otherwise statement 2.
 
 ```
 if (condition1 && (&) condition2) {
