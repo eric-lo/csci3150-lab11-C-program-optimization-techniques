@@ -2,7 +2,7 @@
 
 Loop unrolling is another important trick to increase the branch prediction rate, which is also very easy to implement. Base on the previous program, here we give two simple programs with and without using loop unrolling.
 
-* without loop unrolling
+* **without loop unrolling**
 
 ```c
 #include <time.h>
@@ -40,7 +40,9 @@ int main() {
 }
 ```
 
-* with loop unrolling
+![](/assets/noLoopUnrolling.png)
+
+* **with loop unrolling**
 
 ```c
 #include <time.h>
@@ -66,7 +68,7 @@ int main() {
 
     for (unsigned i = 0; i < 100000; ++i) {
         /* Primary loop */
-        for (unsigned c = 0; c < arraySize; c += 6) {
+        for (unsigned c = 0; c < arraySize; c += 6) {  /*loop unrolling trick*/
             if (c < arraySize && data[c] >= 128)
                 sum += data[c];
             if (c+1 < arraySize && data[c+1] >= 128)
@@ -88,5 +90,5 @@ int main() {
 }
 ```
 
-
+![](/assets/loopunrolling.png)
 
