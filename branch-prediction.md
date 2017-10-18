@@ -43,7 +43,7 @@ int main() {
 
 We use _perf_ to check the number of branch misses:
 
-**without sorting**![](assets/img20.png)
+* **without sorting**![](assets/img20.png)
 
 * **with sorting**![](assets/img21.png)
 
