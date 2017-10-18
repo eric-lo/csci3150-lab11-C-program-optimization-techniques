@@ -26,5 +26,3 @@ gcc -std=c99 -o helloworld helloworld.c
 
 
 
-
-

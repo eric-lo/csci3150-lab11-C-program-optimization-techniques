@@ -1,4 +1,4 @@
-# Program optimization {#program-optimization}
+# Program optimization techniques {#program-optimization}
 
-We will introduce the branch prediction in this part.
+We will introduce three techniques to improve the branch prediction in this part.
 
