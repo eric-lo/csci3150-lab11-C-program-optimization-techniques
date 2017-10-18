@@ -84,7 +84,7 @@ Now the number of branch misses with sorting is almost equal to that without sor
 
 **Branch prediction with && and &**
 
-d
+??????
 
 **References:**
 
