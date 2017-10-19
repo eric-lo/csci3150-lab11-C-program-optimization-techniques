@@ -1,6 +1,6 @@
 # Sorting and Hack {#branch-prediction}
 
-In this section, we are going to talk two techniques to improve the branch prediction accuracy, which are sorting and hack. First let us look into the following program to get to know **branch prediction**:
+In this section, we are going to talk about two techniques to improve the branch prediction accuracy, which are sorting and hack. First let us look into the following program to get to know **branch prediction**:
 
 ```c
 #include <time.h>
