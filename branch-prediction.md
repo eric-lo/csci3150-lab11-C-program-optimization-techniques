@@ -62,7 +62,7 @@ We use _perf_ to check the number of branch misses:
 
 ## Hack {#optimization}
 
-If the compiler isn't able to optimize the branch into a conditional move, we can try some hacks which eliminates the branch and replaces it with bitwise operations:
+If the compiler isn't able to optimize the branch into a conditional move, we can try some hacks which eliminate the branch and replace it with bitwise operations:
 
 ```
 int t = (data[c] - 128) >> 31;
