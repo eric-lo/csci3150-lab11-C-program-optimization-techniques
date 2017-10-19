@@ -1,4 +1,4 @@
-# Hack \(branch-less\) {#branch-prediction}
+# Branch prediction and Hack {#branch-prediction}
 
 First let us look into the following program to get to know **branch prediction**:
 
@@ -60,9 +60,9 @@ We use _perf_ to check the number of branch misses:
 
 * Most applications have well-behaved branches. So modern branch predictors will typically achieve &gt;90% hit rates. But when faced with unpredictable branches with no recognizable patterns, branch predictors are virtually useless. This why sorting makes much less branch predictions.
 
-## Optimization {#optimization}
+## Hack {#optimization}
 
-To optimize the above program, we can remove if using the following lines, which are not easy to understand:
+If the compiler isn't able to optimize the branch into a conditional move, we can try some hacks which eliminates the branch and replaces it with bitwise operations:
 
 ```
 int t = (data[c] - 128) >> 31;
