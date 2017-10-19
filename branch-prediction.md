@@ -1,4 +1,4 @@
-# Branch Prediction {#branch-prediction}
+# Hack \(branch-less\) {#branch-prediction}
 
 First let us look into the following program to get to know **branch prediction**:
 
