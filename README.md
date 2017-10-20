@@ -6,7 +6,7 @@ In this tutorial, we are going to learn some optimization methods for C programs
 
 * Some concrete examples showing the optimization tricks are given:
 
-  * Branch prediction
+  * Sorting and Hack
 
   * Loop unrolling
 
