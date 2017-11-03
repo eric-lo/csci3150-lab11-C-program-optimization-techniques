@@ -1,6 +1,6 @@
 # Sorting and Hack {#branch-prediction}
 
-In this section, we are going to talk about two techniques to improve the branch prediction accuracy, which are sorting and hack. 
+In this section, we are going to talk about two techniques to improve the branch prediction accuracy, which are sorting and hack.
 
 ## Sorting {#optimization}
 
@@ -45,7 +45,11 @@ int main() {
 }
 ```
 
-We use _perf_ to check the number of branch misses:
+The following code sorts the array of data, which has great impact on the branch misses rate. We use _perf_ to check it.
+
+```c
+qsort(data, arraySize, sizeof(int), cmpfunc)
+```
 
 * **without sorting**![](assets/img20.png)
 
