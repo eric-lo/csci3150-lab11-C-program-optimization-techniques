@@ -150,15 +150,11 @@ int main()
 
 * **operator "&":**
 
-The program for this case is simply replacing the condition to
-
-
+The program for this case is simply replacing the condition by
 
 ```
 A[i] > a & B[i] > b & C[i] > c
 ```
-
-
 
 ![](/assets/branch miss with &.png)
 
