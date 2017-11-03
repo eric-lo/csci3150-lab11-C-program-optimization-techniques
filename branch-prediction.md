@@ -166,7 +166,7 @@ A[i] > a & B[i] > b & C[i] > c
 
 ![](/assets/branch miss with &.png)
 
-We can see that the conditions are likely to be true because a randomly generated number is uniformly distributed over the interval 0-10, so the last two conditions need to be evaluated. Therefore, operator "&" can achieve a better branch prediction accuracy than "&&".
+We can see that the conditions are likely to be true because a randomly generated number is uniformly distributed over the interval 0-10, so the last two conditions need to be evaluated. Therefore, operator "&" can achieve a better branch prediction accuracy than that of "&&".
 
 **References:**
 
