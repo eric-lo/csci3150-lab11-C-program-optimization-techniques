@@ -100,8 +100,7 @@ However, there is a difference between them. "&&" serves in the way of "short ci
 
 * **operator "&&":**
 
-```
-
+```c
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
@@ -145,16 +144,21 @@ int main()
 
     return 0;
 }
-
 ```
-
-
-
-
 
 ![](/assets/branch miss with &&.png)
 
 * **operator "&":**
+
+The program for this case is simply replacing the condition to
+
+
+
+```
+A[i] > a & B[i] > b & C[i] > c
+```
+
+
 
 ![](/assets/branch miss with &.png)
 
