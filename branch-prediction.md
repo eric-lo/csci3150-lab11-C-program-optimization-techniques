@@ -82,7 +82,7 @@ Now the number of branch misses with sorting is almost equal to that without sor
 
 * **with sorting:**![](assets/img23.png)
 
-**Branch prediction with && and &**
+**Short circuiting \(Branch prediction with && and &\)**
 
 Both of them can be used to evaluate the correctness of two expressions \(i.e., logical AND\). In the following pseudo code, only both  condition1 and condition2 are true will statement 1 be executed, otherwise statement 2.
 
@@ -96,7 +96,69 @@ if (condition1 && (&) condition2) {
 }
 ```
 
-However, there is a difference between them. "&&" serves in the way of "short circuiting", that is an expression will be stopped being evaluated as soon as its outcome is determined. So if condition1 is false, then condition2 will not be executed, unlike "&" which always evaluate the correctness of both conditions. In the case that most of the first condition is false, "&&" shall achieve a better branch prediction accuracy because there is no need to evaluate the correctness of the second condition. However, if the first condition is more likely to be true, then it would be better to use "&".
+However, there is a difference between them. "&&" serves in the way of "short circuiting", that is an expression will be stopped being evaluated as soon as its outcome is determined. So if condition1 is false, then condition2 will not be executed, unlike "&" which always evaluate the correctness of both conditions. In the case that most of the first condition is false, "&&" shall achieve a better branch prediction accuracy because there is no need to evaluate the correctness of the second condition. This early stop can fasten the program. However, if the first condition is more likely to be true, then it would be better to use "&". The following two programs compare the impact of operators "&&" and "&" on the branch miss rate.
+
+* **operator "&&":**
+
+```
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+
+const int n = 100000;
+
+int  filter ( int* A, int* B, int* C, int a, int b, int c)
+{
+    int i, j = 0;
+    for (i = 0; i < n; ++i)
+    {
+        if(A[i] > a && B[i] > b && C[i] > c)
+           j++;
+    }
+
+    return j;
+}
+
+int main()
+{
+    srand(time(0));
+
+    int A[100000] = {0};
+    int B[100000] = {0};
+    int C[100000] = {0};
+
+    for (int i = 0; i < n; ++i)
+    {
+        int a = rand() /  (RAND_MAX * 1.0) * 10;
+        int b = rand() /  (RAND_MAX * 1.0) * 10;
+        int c = rand() /  (RAND_MAX * 1.0) * 10;
+
+        A[i] = a;
+        B[i] = b;
+        C[i] = c;
+    }
+
+    int filNum = filter(A, B, C, 2, 2, 2);
+
+    printf("%d\n", filNum);
+
+    return 0;
+}
+
+```
+
+
+
+
+
+![](/assets/branch miss with &&.png)
+
+* **operator "&":**
+
+![](/assets/branch miss with &.png)
+
+We can see that the conditions are likely to be true because a randomly generated number is uniformly distributed over the interval 0-10, so the last two conditions need to be evaluated. Therefore, operator "&" can achieve a better branch prediction accuracy than "&&".
 
 **References:**
 
