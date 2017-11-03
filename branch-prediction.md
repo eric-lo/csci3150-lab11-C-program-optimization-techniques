@@ -45,7 +45,7 @@ int main() {
 }
 ```
 
-The following code sorts the array of data, which has great impact on the branch misses rate. We use _perf_ to check it.
+The following code sorts the array of data, which has great impact on the branch misses rate. We can use _perf_ to check it.
 
 ```c
 qsort(data, arraySize, sizeof(int), cmpfunc)
