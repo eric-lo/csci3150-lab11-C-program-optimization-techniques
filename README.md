@@ -16,5 +16,5 @@ Try to play around with them! Hope you can enjoy this lab!
 
 ---
 
-By Zhuangbin Chen \(zbchen@cse.cuhk.edu.hk\)
+By CHEN Zhuangbin \(zbchen@cse.cuhk.edu.hk\)
 
