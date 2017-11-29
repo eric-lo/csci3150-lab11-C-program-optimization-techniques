@@ -1,4 +1,4 @@
-## Turning random access to sequential access  {#sequential-access-and-random-access}
+## Turning random access to sequential access {#sequential-access-and-random-access}
 
 * #### Sequential access
 
@@ -9,23 +9,23 @@ The following code`seq_access.c`accesses memory sequentially.
 #include <stdlib.h>
 #include <string.h>
 
-size_t max_size = 1ULL<<24; // 2^24
+size_t max_size = 1ULL<<24; /* 2^24 */
 int access_size = 1000000;
 
 int main(void) {
     srand((int)123);
-    // Generate an array
+    /* Generate an array */
     int *tmp = (int *)malloc(sizeof(int) * max_size);
     for (size_t i = 0; i < max_size; i++) {
         tmp[i] = rand()%10;
     }
-    // Generate a list of elements to access sequentially
+    /* Generate a list of elements to access sequentially */
     size_t *access = (size_t *)malloc(sizeof(size_t) * access_size);
-    int access_begin = 0; // we will access tmp from the beginning
+    int access_begin = 0; /* we will access tmp from the beginning */
     for (int i = 0; i < access_size; i++) {
         access[i] = access_begin++;
     }
-    // Read tmp sequentially
+    /* Read tmp sequentially */
     for (int i = 0; i < access_size; i++) {
         printf("num[%zu]=%d\n", access[i], tmp[access[i]]);
     }
@@ -43,22 +43,22 @@ The following code`rand_access.c`tries to access memory randomly.
 #include <stdlib.h>
 #include <string.h>
 
-size_t max_size = 1ULL<<24; // 2^24
+size_t max_size = 1ULL<<24; /* 2^24 */
 int access_size = 1000000;
 
 int main(void) {
     srand((int)123);
-    // Generate an array
+    /* Generate an array */
     int *tmp = (int *)malloc(sizeof(int) * max_size);
     for (size_t i = 0; i < max_size; i++) {
         tmp[i] = rand() % 10;
     }
-    // Generate a list of elements to access randomly
+    /* Generate a list of elements to access randomly */
     size_t *access = (size_t *)malloc(sizeof(size_t) * access_size);
     for (int i = 0; i < access_size; i++) {
         access[i] = rand() * 1024 % max_size;
     }
-    // Read tmp randomly
+    /* Read tmp randomly */
     for (int i = 0; i < access_size; i++) {
         printf("num[%zu]=%d\n", access[i], tmp[access[i]]);
     }
