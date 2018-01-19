@@ -1,6 +1,6 @@
-# Sorting and Hack {#branch-prediction}
+# Branch Prediction Friendly  {#branch-prediction}
 
-In this section, we are going to talk about two techniques to improve the branch prediction accuracy, which are sorting and hack.
+In this section, we introduce two tricks to improve branch prediction, which are sorting and binary operations.
 
 ## Sorting {#optimization}
 
@@ -68,7 +68,7 @@ qsort(data, arraySize, sizeof(int), cmpfunc)
 
 * Most applications have well-behaved branches. So modern branch predictors will typically achieve &gt;90% hit rates. But when faced with unpredictable branches with no recognizable patterns, branch predictors are virtually useless. This is why sorting makes much less branch predictions.
 
-## Hack {#optimization}
+## Binary operations {#optimization}
 
 If the compiler isn't able to optimize the branch into a conditional move, we can try some hacks which eliminate the branch and replace it with bitwise operations:
 
@@ -82,7 +82,9 @@ sum += ~t & data[c];
 * `if data[c] >= 128`, then`t = 0`,`~t & data[c] = data[c]`.
 * `if data[c] < 128`, then`t = -1`,`~t & data[c] = 0`.
 
-Therefore, the above two lines can work correctly as same as`if`. Please refer to the references if you would like to know the operators \(`>>`,`~`,`&`\) in detail.
+Therefore, the above two lines can work correctly as same as`if`. It leverages the fact that negative numbers have their most significant bit as 1 \(do you know what's 2's complement?\) and &gt;&gt; 31 would leave a '1' there.  After ~, the mask becomes all 0's and wipe away any value &lt;128.
+
+Please refer to the references if you would like to know the operators \(`>>`,`~`,`&`\) in detail.
 
 Now the number of branch misses with sorting is almost equal to that without sorting:
 
