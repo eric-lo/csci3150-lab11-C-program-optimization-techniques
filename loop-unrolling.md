@@ -1,6 +1,6 @@
 # Loop unrolling {#branch-prediction}
 
-Loop unrolling is another important trick to increase the branch prediction rate, which is also very easy to implement. Base on the previous program, here we give two simple programs with and without using loop unrolling.
+Loop unrolling is another important trick to increase the branch prediction rate, which is also very easy to implement. Base on the previous program, here we give two simple programs with and without using loop unrolling. 
 
 * **without loop unrolling**
 
@@ -42,7 +42,7 @@ int main() {
 
 ![](/assets/noLoopUnrolling.png)
 
-* **with loop unrolling**
+* **with loop unrolling \(**_Six copies loop unrolling_, it means that it does six original iterations in the new iteration with loop unrolling.**\)**
 
 ```c
 #include <time.h>
